@@ -1,0 +1,190 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    div.container {
+        // width: 44%;
+        // max-width: 35%;
+        height: auto;
+        margin: 45px auto 0 auto;
+        border: 1px solid rgba(128, 128, 128, 0.347);
+        border-radius: 10px;
+        padding: 40px;
+        div.logo {
+            // border: 1px solid brown;
+            text-align: center;
+            
+            svg {
+                width:75px;
+                height: 24px;
+                
+            }
+           
+        }
+        h1 {
+            // border: 1px solid brown;
+            text-align: center;
+            margin: 10px 0 10px 0;
+            font-size: 24px;
+            color: rgb(32,33,36);
+            font-weight: 400;
+            line-height: 1.3333;
+            font-family: 'Product Sans', sans-serif;
+        }
+        p.continue {
+            // border: 1px solid brown;
+            text-align: center;
+            color: rgb(32,33,36);
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 0.1px;
+            line-height: 1.5;
+            font-family: 'Roboto', sans-serif;
+            
+        }
+        div.form {
+            margin: 32px 0 10px 0;
+            input {
+                width: 100%;
+                height: 54px;
+                border-radius: 4px;
+                color: rgb(32,33,36);
+                font-size: 16px;
+                
+                margin: 0 0 10px 0;
+                padding: 13px 15px;
+                border: 1px solid rgba(128, 128, 128, 0.347);
+            }
+            input:focus {
+                outline: 2px solid rgb(26,115,232);
+                // #1A73E8;
+            }
+            a {
+                color: rgb(26,115,232);
+                text-decoration: none;
+                font-weight: 550;
+                letter-spacing: 0.25px;
+                font-size: 14px;
+                font-family: 'Roboto', sans-serif;
+            }
+            a:hover {
+                cursor: pointer;
+            }
+            p {
+                font-size: 14px;
+                color: #5F6368;
+                font-family: 'Roboto', sans-serif;
+                margin: 45px 0 45px 0;
+                line-height: 1.4286;
+            }
+            div.button {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                button {
+                    height: 38px;
+                    width: 80px;
+                    font-family: 'Product Sans', sans-serif;
+                    font-size: .875rem;
+                    letter-spacing: .0107142857em;
+                    font-weight: 500;
+                    background-color: #1A73E8;
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                   
+                }
+                button:hover {
+                    cursor: pointer;
+                }
+            }
+          
+        }
+    }
+    div.footer {
+        width: 44%;
+        height: auto;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        padding: 0 14px 0 14px;
+        span {
+            width: fit-content;
+            padding: 16px;
+            font-size: 12px;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.3333333;
+            color: #5F6368;
+        }
+        span.first {
+            margin-right: auto;
+            padding: 0;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width:1440px) {
+    div.container {
+        min-width: 32%;
+        max-width: 32%;
+    }
+    div.footer {
+        min-width: 32%;
+        max-width: 32%;
+    }
+}
+@media (max-width:1232px) {
+    div.container {
+        min-width: 37%;
+        max-width: 37%;
+    }
+    div.footer {
+        min-width: 37%;
+        max-width: 37%;
+    }
+}
+
+@media (max-width:1024px) {
+    div.container {
+        min-width: 44%;
+        max-width: 44%;
+    }
+    div.footer {
+        min-width: 44%;
+        max-width: 44%;
+    }
+}
+@media (max-width:896px) {
+    div.container {
+        min-width: 55%;
+        max-width: 55%;
+    }
+    div.footer {
+        min-width: 55%;
+        max-width: 55%;
+    }
+}
+@media (max-width:768px) {
+    div.container {
+        max-width: 61%;
+    }
+    div.footer {
+        max-width: 61%;
+    }
+}
+@media (max-width:600px) {
+    div.container {
+        min-width: 100%;
+        max-width: 100%;
+        border: none;
+        padding: 20px;
+        
+    }
+    div.footer {
+        min-width: 100%;
+        max-width: 100%;
+    }
+}

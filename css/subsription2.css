@@ -1,0 +1,837 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* body {
+  font-family: "Roboto", sans-serif;
+  position: relative;
+}
+* body #menu-toggle {
+  display: none;
+}
+* body #menu-toggle:checked ~ .side-nav {
+  left: 0;
+}
+* body nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 120px;
+  padding: 0.5rem 0;
+  height: 15vh;
+  width: 97%;
+  margin: 0 auto;
+}
+* body nav div.start {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0 1 175px;
+}
+* body nav div.start button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  flex: 0 1;
+  border-radius: 50%;
+  font-size: 20px;
+  background-color: transparent;
+}
+* body nav div.start button span {
+  font-weight: 500;
+  font-size: 30px;
+}
+* body nav div.start button span:hover {
+  cursor: pointer;
+}
+* body nav div.start button:hover {
+  background-color: rgba(212, 212, 212, 0.6509803922);
+  cursor: pointer;
+}
+* body nav div.start div.yt-logo {
+  width: 135px;
+  height: 50px;
+  padding: 0.5rem;
+}
+* body nav div.start div.yt-logo a img {
+  width: 120px;
+  height: 30px;
+}
+* body nav form.middle {
+  flex: 0 1 732px;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+* body nav form.middle input.search {
+  outline: none;
+  padding: 0 1rem;
+  flex: 1 2;
+  height: 45px;
+  font-size: 18px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border: 1px solid rgba(128, 128, 128, 0.604);
+}
+* body nav form.middle button.submit {
+  height: 45px;
+  min-width: 70px;
+  margin-right: 15px;
+  border-radius: 0 25px 25px 0;
+  border: 1px solid rgba(128, 128, 128, 0.604);
+  outline: none;
+  background-color: rgba(240, 240, 240, 0.4549019608);
+}
+* body nav form.middle button.submit span {
+  font-size: 30px;
+}
+* body nav form.middle button.mic {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(240, 240, 240, 0.8235294118);
+}
+* body nav form.middle button.mic:hover {
+  background-color: rgba(212, 212, 212, 0.6509803922);
+}
+* body nav div.end {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0 1 130px;
+}
+* body nav div.end button.ellipsis {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+}
+* body nav div.end button.ellipsis:active {
+  background-color: rgba(212, 212, 212, 0.6509803922);
+}
+* body nav div.end div a {
+  text-decoration: none;
+}
+* body nav div.end div a button.user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+  width: 90px;
+  height: 35px;
+  border: 1px solid rgba(128, 128, 128, 0.342);
+  border-radius: 25px;
+  font-size: 14px;
+  background-color: transparent;
+  color: #065fd4;
+  font-family: "Roboto", sans-serif;
+}
+* body nav div.end div a button.user i.far {
+  font-size: 18px;
+}
+* body nav div.end div a button.user span {
+  font-size: 16px;
+}
+* body nav div.end div a button.user:hover {
+  background-color: rgba(170, 221, 221, 0.455);
+}
+* body section.side-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 19vw;
+  transition: 0.25s;
+  max-height: 100vh;
+  padding: 12px 15px 0 15px;
+  z-index: 1;
+  background-color: white;
+  font-size: 14px;
+  overflow-y: auto;
+}
+* body section.side-nav div.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin-left: 6px;
+  margin-top: 10px;
+}
+* body section.side-nav div.head button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  border-radius: 50%;
+  font-size: 20px;
+  margin-bottom: 10px;
+  background-color: transparent;
+}
+* body section.side-nav div.head button span {
+  font-weight: 500;
+  font-size: 30px;
+}
+* body section.side-nav div.head button span:hover {
+  cursor: pointer;
+}
+* body section.side-nav div.head button:hover {
+  background-color: rgba(212, 212, 212, 0.6509803922);
+  cursor: pointer;
+}
+* body section.side-nav div.head div.yt-logo {
+  width: 135px;
+  height: 50px;
+}
+* body section.side-nav div.head div.yt-logo a img {
+  width: 120px;
+  height: 30px;
+}
+* body section.side-nav ul {
+  margin-top: 10px;
+  padding: 0;
+  width: 85%;
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+* body section.side-nav ul li {
+  padding: 5px 4px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  list-style-type: none;
+}
+* body section.side-nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+* body section.side-nav ul li a div {
+  width: 24px;
+  height: 24px;
+}
+* body section.side-nav ul li a:hover {
+  cursor: pointer;
+}
+* body section.side-nav ul li p {
+  margin: 0;
+}
+* body section.side-nav ul li:hover {
+  background-color: rgba(212, 212, 212, 0.6509803922);
+  border-radius: 10px;
+  cursor: pointer;
+}
+* body section.side-nav div.hr-line {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(128, 128, 128, 0.275);
+}
+* body section.side-nav div.sign-in {
+  margin: 22px 0 22px 0;
+  padding: 0;
+  width: 85%;
+  min-width: 0;
+}
+* body section.side-nav div.sign-in a {
+  text-decoration: none;
+}
+* body section.side-nav div.sign-in a button.user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+  margin-top: 10px;
+  width: 90px;
+  height: 35px;
+  border: 1px solid rgba(128, 128, 128, 0.342);
+  border-radius: 25px;
+  font-size: 14px;
+  background-color: transparent;
+  color: #065fd4;
+}
+* body section.side-nav div.sign-in a button.user i.far {
+  font-size: 18px;
+}
+* body section.side-nav div.sign-in a button.user span {
+  font-size: 16px;
+}
+* body section.side-nav div.sign-in a button:hover {
+  background-color: rgba(170, 221, 221, 0.455);
+  cursor: pointer;
+}
+* body section.side-nav div.footer {
+  margin-top: 22px;
+  padding: 0;
+  width: 85%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+* body section.side-nav div.footer span {
+  color: #606060;
+}
+* body section.side-nav div.footer span.last {
+  color: #909090;
+}
+* body aside.icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  left: 0.4%;
+  position: fixed;
+}
+* body aside.icons a {
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  height: 74px;
+  width: 64px;
+  border-radius: 7px;
+  padding: 15px 0 15px 0;
+}
+* body aside.icons a div {
+  margin: auto;
+  height: 24px;
+  width: 24px;
+}
+* body aside.icons a span {
+  font-size: 12px;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
+* body aside.icons a:hover {
+  background-color: rgba(240, 240, 240, 0.8235294118);
+}
+* body section.sub {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  padding-top: 160px;
+  margin: 0 15px 0 80px;
+}
+* body section.sub div.svg {
+  height: 120px;
+  width: 120px;
+}
+* body section.sub div.text p:nth-of-type(1) {
+  font-size: 24px;
+  text-align: center;
+  font-family: "roboto", sans-serif;
+  margin-top: 20px;
+}
+* body section.sub div.text p:nth-of-type(2) {
+  font-size: 14px;
+  text-align: center;
+  font-family: "roboto", sans-serif;
+  margin: 20px 0;
+}
+* body section.sub div.sign a {
+  text-decoration: none;
+}
+* body section.sub div.sign a button.user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+  margin-top: 10px;
+  width: 90px;
+  height: 35px;
+  border: 1px solid rgba(128, 128, 128, 0.342);
+  border-radius: 25px;
+  font-size: 14px;
+  background-color: transparent;
+  color: #065fd4;
+}
+* body section.sub div.sign a button.user i.far {
+  font-size: 18px;
+}
+* body section.sub div.sign a button.user span {
+  font-size: 16px;
+}
+* body section.sub div.sign a button:hover {
+  background-color: rgba(170, 221, 221, 0.455);
+  cursor: pointer;
+}
+
+@media (min-width: 1000px) and (max-width: 1240px) {
+  section.side-nav {
+    min-width: 210px !important;
+    max-width: 230px !important;
+  }
+}
+@media (min-width: 831px) and (max-width: 1000px) {
+  section.side-nav {
+    min-width: 210px !important;
+    max-width: 210px !important;
+  }
+}
+@media (max-width: 830px) {
+  nav {
+    height: 13vh !important;
+  }
+  section.side-nav {
+    min-width: 190px !important;
+    max-width: 200px !important;
+    font-size: 12px !important;
+  }
+  section.side-nav div.head {
+    margin-top: 0px !important;
+  }
+  section.side-nav div.head button {
+    font-size: 16px !important;
+    margin-bottom: 0 !important;
+  }
+  section.side-nav div.head div.yt-logo {
+    width: 128px !important;
+    height: 25px !important;
+  }
+  section.side-nav div.head div.yt-logo a img {
+    width: 113px !important;
+    height: 25px !important;
+  }
+  section.side-nav ul {
+    font-size: 12px !important;
+  }
+  section.side-nav ul li a div {
+    width: 18px !important;
+    height: 18px !important;
+  }
+  section.side-nav div.sign-in a button.user {
+    width: 80px !important;
+    height: 30px !important;
+    font-size: 12px !important;
+    padding: 0 0.35rem !important;
+  }
+  section.side-nav div.sign-in a button.user i.far {
+    font-size: 16px !important;
+  }
+  section.side-nav div.sign-in a button.user span {
+    font-size: 14px !important;
+  }
+  aside.icons {
+    left: 0.4%;
+  }
+  aside.icons a {
+    height: 62px !important;
+    width: 55px !important;
+    padding: 12px 0 12px 0 !important;
+  }
+  aside.icons a div {
+    width: 18px !important;
+    height: 18px !important;
+  }
+  aside.icons a span {
+    font-size: 10px !important;
+  }
+  section.sub {
+    padding-top: 120px !important;
+  }
+  section.sub div.svg {
+    height: 100px !important;
+    width: 100px !important;
+  }
+  section.sub div.text p:nth-of-type(1) {
+    font-size: 20px !important;
+    margin-top: 10px !important;
+  }
+  section.sub div.text p:nth-of-type(2) {
+    font-size: 12px !important;
+    margin: 10px 0 !important;
+  }
+  section.sub div.sign a button.user {
+    width: 80px !important;
+    height: 30px !important;
+    font-size: 12px !important;
+    padding: 0 0.35rem !important;
+  }
+  section.sub div.sign a button.user i.far {
+    font-size: 16px !important;
+  }
+  section.sub div.sign a button.user span {
+    font-size: 14px !important;
+  }
+}
+@media screen and (max-width: 730px) {
+  nav {
+    height: 11vh;
+  }
+  nav div.start {
+    flex: 0 1 150px !important;
+  }
+  nav div.start button {
+    font-size: 18px !important;
+  }
+  nav div.start button span {
+    font-size: 25px !important;
+  }
+  nav div.start div.yt-logo {
+    width: 110px !important;
+    height: 40px !important;
+    padding: 0 !important;
+  }
+  nav div.start div.yt-logo a img {
+    width: 90px !important;
+  }
+  nav input.search {
+    width: 180px;
+    height: 38px !important;
+  }
+  nav button.submit {
+    height: 38px !important;
+  }
+  section.side-nav {
+    min-width: 170px !important;
+    max-width: 170px !important;
+    font-size: 12px;
+  }
+  section.side-nav div.head button {
+    font-size: 15px !important;
+    height: 30px !important;
+    width: 30px !important;
+  }
+  section.side-nav div.head button span {
+    font-size: 26px !important;
+  }
+  section.side-nav div.head div.yt-logo {
+    width: 95px !important;
+    height: 20px !important;
+  }
+  section.side-nav div.head div.yt-logo a img {
+    width: 95px !important;
+    height: 20px !important;
+  }
+  aside.icons {
+    left: 0.4%;
+  }
+  aside.icons a {
+    height: 55px !important;
+    width: 50px !important;
+    padding: 7px 0 7px 0 !important;
+  }
+  aside.icons a div {
+    width: 15px !important;
+    height: 15px !important;
+  }
+  aside.icons a span {
+    font-size: 8px !important;
+  }
+  section.sub div.svg {
+    height: 80px !important;
+    width: 80px !important;
+  }
+  section.sub div.text p:nth-of-type(1) {
+    font-size: 18px !important;
+    margin-top: 10px !important;
+  }
+  section.sub div.text p:nth-of-type(2) {
+    font-size: 10px !important;
+    margin: 10px 0 !important;
+  }
+}
+@media (max-width: 675px) {
+  nav {
+    height: 11vh !important;
+    gap: 60px !important;
+  }
+  nav div.start {
+    flex: 0 1 135px !important;
+  }
+  nav div.start button {
+    font-size: 14px !important;
+  }
+  nav div.start button span {
+    font-size: 20px !important;
+  }
+  nav div.start div.yt-logo {
+    width: 90px !important;
+    height: 40px !important;
+    padding: 0 !important;
+  }
+  nav div.start div.yt-logo a img {
+    width: 80px !important;
+    height: 25px !important;
+    margin-top: 5px !important;
+  }
+  nav form.middle {
+    width: 81px !important;
+    max-width: 150px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 10px !important;
+  }
+  nav form.middle input.search {
+    display: none;
+  }
+  nav form.middle button.submit {
+    min-width: 55px;
+    background-color: transparent !important;
+    border: none !important;
+    min-width: 0 !important;
+    border-radius: 0 !important;
+  }
+  nav form.middle button.mic {
+    min-width: 30px !important;
+    height: 30px !important;
+  }
+  nav div.end div a button.user {
+    padding: 0 0.25rem !important;
+    width: 75px !important;
+    height: 29px !important;
+    font-size: 12px !important;
+  }
+  nav div.end div a button.user i.far {
+    font-size: 14px !important;
+  }
+  nav div.end div a button.user span {
+    font-size: 14px !important;
+  }
+  section.side-nav {
+    padding: 3px 8px 0 4px !important;
+    min-width: 175px !important;
+    max-width: 180px !important;
+  }
+  aside.icons {
+    left: 0.4%;
+  }
+  aside.icons a {
+    height: 53px !important;
+    width: 50px !important;
+    padding: 7px 0 7px 0 !important;
+  }
+  aside.icons a div {
+    width: 15px !important;
+    height: 15px !important;
+  }
+  section.sub {
+    padding: 90px 0 80px 0 !important;
+  }
+  section.sub div.svg {
+    height: 60px !important;
+    width: 60px !important;
+  }
+  section.sub div.text p:nth-of-type(1) {
+    font-size: 16px !important;
+    margin-top: 10px !important;
+  }
+  section.sub div.text p:nth-of-type(2) {
+    font-size: 8px !important;
+    margin: 10px 0 !important;
+  }
+  section.sub div.sign a button.user {
+    padding: 0 0.25rem !important;
+    width: 67px !important;
+    height: 25px !important;
+    font-size: 10px !important;
+  }
+  section.sub div.sign a button.user i.far {
+    font-size: 12px !important;
+  }
+  section.sub div.sign a button.user span {
+    font-size: 12px !important;
+  }
+}
+@media (max-width: 530px) {
+  nav div.end div a button.user {
+    padding: 0 0.25rem !important;
+    width: 67px !important;
+    height: 25px !important;
+    font-size: 10px !important;
+  }
+  nav div.end div a button.user i.far {
+    font-size: 12px !important;
+  }
+  nav div.end div a button.user span {
+    font-size: 12px !important;
+  }
+  aside.icons {
+    left: 0.4%;
+  }
+  aside.icons a {
+    height: 40px !important;
+    width: 40px !important;
+    padding: 5px 0 5px 0 !important;
+  }
+  aside.icons a div {
+    width: 12px !important;
+    height: 12px !important;
+  }
+  aside.icons a span {
+    font-size: 7px !important;
+  }
+  section.sub {
+    padding: 90px 0 80px 0 !important;
+  }
+  section.sub div.svg {
+    height: 60px !important;
+    width: 60px !important;
+  }
+  section.sub div.text p:nth-of-type(1) {
+    font-size: 16px !important;
+    margin-top: 10px !important;
+  }
+  section.sub div.text p:nth-of-type(2) {
+    font-size: 8px !important;
+    margin: 10px 0 !important;
+  }
+  section.sub div.sign a button.user {
+    padding: 0 0.25rem !important;
+    width: 67px !important;
+    height: 25px !important;
+    font-size: 10px !important;
+  }
+  section.sub div.sign a button.user i.far {
+    font-size: 12px !important;
+  }
+  section.sub div.sign a button.user span {
+    font-size: 12px !important;
+  }
+}
+@media (max-width: 490px) {
+  nav {
+    gap: 0 !important;
+    height: 9vh !important;
+  }
+  nav form.middle {
+    margin-left: 20px !important;
+  }
+  nav form.middle button.mic {
+    display: none;
+  }
+  section.side-nav {
+    min-width: 133px !important;
+    max-width: 133px !important;
+  }
+  section.side-nav div.head {
+    margin: 0 0 0 -20px !important;
+    width: 80% !important;
+  }
+  section.side-nav div.head button {
+    font-size: 12px !important;
+    height: 25px !important;
+    width: 25px !important;
+  }
+  section.side-nav div.head button span {
+    font-size: 25px !important;
+  }
+  section.side-nav div.head div.yt-logo {
+    width: 85px !important;
+    height: 20px !important;
+  }
+  section.side-nav div.head div.yt-logo a img {
+    width: 85px !important;
+    height: 20px !important;
+  }
+  section.side-nav ul li {
+    gap: 10px !important;
+  }
+  section.sub {
+    padding: 70px 0 60px 0 !important;
+  }
+  section.sub div.text p:nth-of-type(1) {
+    font-size: 13.5px !important;
+    margin-top: 10px !important;
+  }
+  section.sub div.text p:nth-of-type(2) {
+    font-size: 7px !important;
+    margin: 7px 0 !important;
+  }
+}
+@media (max-width: 320px) {
+  nav {
+    height: 7vh !important;
+  }
+  nav div.start {
+    width: 130px !important;
+    height: 30px !important;
+  }
+  nav div.start div.yt-logo {
+    height: 28px !important;
+    width: 75px !important;
+  }
+  nav div.start div.yt-logo a img {
+    margin: 0 !important;
+    width: 75px !important;
+  }
+  section.side-nav {
+    min-width: 120px !important;
+    max-width: 120px !important;
+    font-size: 8px !important;
+  }
+  section.side-nav div.head button {
+    font-size: 9px !important;
+    height: 19px !important;
+    width: 19px !important;
+  }
+  section.side-nav div.head button span {
+    font-size: 19px !important;
+  }
+  section.side-nav div.head div.yt-logo {
+    width: 60px !important;
+    height: 15px !important;
+  }
+  section.side-nav div.head div.yt-logo a img {
+    width: 60px !important;
+    height: 15px !important;
+  }
+  section.side-nav ul {
+    font-size: 12px !important;
+  }
+  section.side-nav ul li a div {
+    width: 14px !important;
+    height: 14px !important;
+  }
+  section.side-nav div.sign-in a button.user {
+    width: 65px !important;
+    height: 20px !important;
+    font-size: 10px !important;
+    padding: 0 0.35rem !important;
+  }
+  section.side-nav div.sign-in a button.user i.far {
+    font-size: 14px !important;
+  }
+  section.side-nav div.sign-in a button.user span {
+    font-size: 12px !important;
+  }
+  section.sub {
+    padding: 60px 0 50px 0 !important;
+  }
+  section.sub div.svg {
+    height: 40px !important;
+    width: 40px !important;
+  }
+  section.sub div.text p:nth-of-type(1) {
+    font-size: 11px !important;
+    margin-top: 8px !important;
+  }
+  section.sub div.text p:nth-of-type(2) {
+    font-size: 6px !important;
+    margin: 5px 0 !important;
+  }
+  section.sub div.sign a button.user {
+    width: 65px !important;
+    height: 20px !important;
+    font-size: 10px !important;
+    padding: 0 0.35rem !important;
+  }
+  section.sub div.sign a button.user i.far {
+    font-size: 14px !important;
+  }
+  section.sub div.sign a button.user span {
+    font-size: 12px !important;
+  }
+}
